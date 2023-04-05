@@ -1,0 +1,10 @@
+const { MongoClient } = require('mongodb');
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb+srv://felhasznalo:jelszo@cluster0.aorgxce.mongodb.net/test";
+
+MongoClient.connect(url, function(err, db){
+    if(err) throw err;
+    console.log('Sikeres csatlakozás');
+    db.close(); //folyamatos adatbázis kapcsolat ne legyen
+});
